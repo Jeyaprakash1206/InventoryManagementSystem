@@ -1,0 +1,1 @@
+create database name stock then import stock.sql files.
