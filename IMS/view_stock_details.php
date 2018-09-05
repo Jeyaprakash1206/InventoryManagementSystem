@@ -23,51 +23,13 @@ else {
         <link href="css/plugins/morris.css" rel="stylesheet">
         <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <script src=""></script>
+        
         <script LANGUAGE="JavaScript">
-            <!--
-            // Nannette Thacker http://www.shiningstar.net
+           // <!--
             function confirmSubmit()
             {
-                var agree=confirm("Are you sure you wish to Delete this Entry?");
-                if (agree)
-                    return true ;
-                else
-                    return false ;
-            }
-
-            function confirmDeleteSubmit()
-            {
-                var agree=confirm("Are you sure you wish to Delete Seletec Record?");
-                if (agree)
-
-                    document.deletefiles.submit();
-                else
-                    return false ;
-            }
-
-
-            function checkAll()
-            {
-
-                var field=document.forms.deletefiles;
-                for (i = 0; i < field.length; i++)
-                    field[i].checked = true ;
-            }
-
-            function uncheckAll()
-            {
-                var field=document.forms.deletefiles;
-                for (i = 0; i < field.length; i++)
-                    field[i].checked = false ;
-            }
-            // -->
-        </script>
-        <script LANGUAGE="JavaScript">
-            <!--
-            // Nannette Thacker http://www.shiningstar.net
-            function confirmSubmit()
-            {
-                var agree=confirm("Are you sure you wish to Delete this Entry?");
+                //alert('second confirm');
+                var agree=confirm("Are you sure to delete this record?");
                 if (agree)
                     return true ;
                 else
@@ -75,7 +37,7 @@ else {
             }
             function confirmDeleteSubmit()
             {
-                var agree=confirm("Are you sure you wish to Delete Seletec Record?");
+                var agree=confirm("Are you sure to delete selected records?");
                 if (agree)
 
                     document.deletefiles.submit();
@@ -95,6 +57,16 @@ else {
                 var field=document.forms.deletefiles;
                 for (i = 0; i < field.length; i++)
                     field[i].checked = false ;
+            }
+
+            function disposeItem(id) {
+                debugger
+                alert("Disose"  +id);
+                $id = id;
+
+                <?php
+                 //   $result=$db->execute($con,"UPDATE stock_etails SET isDisposed = true WHERE id= '$id' "); 
+                ?>
             }
             // -->
         </script>
@@ -279,6 +251,7 @@ else {
                                                         <th>Avail Stock</th>
                                                         <th>Expiry Date</th>
                                                         <th>Action</th>
+                                                        <th>Dispose</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
@@ -301,9 +274,24 @@ else {
                                                             <td><?php echo $row['selling_price']; ?></td>
                                                             <td><?php $quantity = $db->queryUniqueValue($con,"SELECT quantity FROM stock_avail WHERE name='".$row['stock_name']."'"); echo $quantity; ?></td>
                                                             <td><?php echo $phpdatee ?></td>
-                                                            <td> <a href="update_stock_details.php?sid=<?php echo $row['id'];?>"><span class=" glyphicon glyphicon-pencil"></span></a>
-                                                            <a onclick="return confirmSubmit()" href="delete.php?id=<?php echo $row['id']; ?>&table=stock_details&return=view_stock_details.php"><span class="glyphicon glyphicon-trash"></span></a>
-                                                            <input  type="checkbox" value="<?php echo $row['id']; ?>" name="checklist[]" /></td>
+                                                            <td> 
+                                                                <a href="update_stock_details.php?sid=<?php echo $row['id'];?>">
+                                                                    <span class=" glyphicon glyphicon-pencil"></span>
+                                                                </a>
+                                                                <a onclick="return confirmSubmit()" href="delete.php?id=<?php echo $row['id']; ?>
+                                                                    &table=stock_details&return=view_stock_details.php">
+                                                                    <span class="glyphicon glyphicon-trash"></span>
+                                                                </a>
+                                                                <input  type="checkbox" value="<?php echo $row['id']; ?>" name="checklist[]" />
+                                                            </td>
+                                                            <td> 
+                                                                <button type="submit" name="Submit" class="btn btn-primary" 
+                                                                            onclick="disposeItem(<?php echo $row['id']; ?>)"> Dispose </button>
+                                                                
+                                                                <a href="dispose_product.php?sid=<?php echo $row['id'];?>">
+                                                                    <span class=" glyphicon glyphicon-pencil"></span>
+                                                                </a>
+                                                            </td>
                                                         </tr>
                                                         <?php
                                                     }
