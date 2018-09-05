@@ -277,7 +277,7 @@ else {
                                                         <th>Category</th>
                                                         <th>Selling Price</th>
                                                         <th>Avail Stock</th>
-                                                        <th>Expaire Date</th>
+                                                        <th>Expiry Date</th>
                                                         <th>Action</th>
                                                     </tr>
                                                     </thead>
