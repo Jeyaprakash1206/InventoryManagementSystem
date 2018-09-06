@@ -58,16 +58,7 @@ else {
                 for (i = 0; i < field.length; i++)
                     field[i].checked = false ;
             }
-
-            function disposeItem(id) {
-                debugger
-                alert("Disose"  +id);
-                $id = id;
-
-                <?php
-                 //   $result=$db->execute($con,"UPDATE stock_etails SET isDisposed = true WHERE id= '$id' "); 
-                ?>
-            }
+            
             // -->
         </script>
 
@@ -98,7 +89,7 @@ else {
             ?>
         </nav>
         <?php
-        $SQL = "SELECT * FROM  stock_details";
+        $SQL = "SELECT * FROM  stock_details ";
         if(isset($_POST['Search']) AND trim($_POST['searchtxt'])!="")
         {
             $SQL = "SELECT COUNT(*) as num FROM stock_details WHERE stock_name LIKE '%".$_POST['searchtxt']."%' OR supplier_id LIKE '%".$_POST['searchtxt']."%' OR category LIKE '%".$_POST['searchtxt']."%' OR date LIKE '%".$_POST['searchtxt']."%'";
@@ -121,7 +112,7 @@ else {
             $start = ($page - 1) * $limit;
         else
             $start = 0;
-        $sql = "SELECT * FROM stock_details ORDER BY date desc LIMIT $start, $limit ";
+        $sql = "SELECT * FROM stock_details WHERE isDisposed = 1 ORDER BY date desc LIMIT $start, $limit";
         if(isset($_POST['Search']) AND trim($_POST['searchtxt'])!="")
         {
             $sql = "SELECT * FROM stock_details WHERE stock_name LIKE '%".trim($_POST['searchtxt'])."%' OR supplier_id LIKE '%".trim($_POST['searchtxt'])."%' OR category LIKE '%".trim($_POST['searchtxt'])."%' OR date LIKE '%".trim($_POST['searchtxt'])."%' ORDER BY date desc LIMIT $start, $limit ";
@@ -284,12 +275,9 @@ else {
                                                                 </a>
                                                                 <input  type="checkbox" value="<?php echo $row['id']; ?>" name="checklist[]" />
                                                             </td>
-                                                            <td> 
-                                                                <button type="submit" name="Submit" class="btn btn-primary" 
-                                                                            onclick="disposeItem(<?php echo $row['id']; ?>)"> Dispose </button>
-                                                                
+                                                            <td>                                                                 
                                                                 <a href="dispose_product.php?sid=<?php echo $row['id'];?>">
-                                                                    <span class=" glyphicon glyphicon-pencil"></span>
+                                                                    <span class=" glyphicon glyphicon-remove"></span>
                                                                 </a>
                                                             </td>
                                                         </tr>
