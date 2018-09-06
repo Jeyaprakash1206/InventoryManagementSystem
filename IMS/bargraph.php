@@ -21,7 +21,7 @@
 <script type="text/javascript" src="graph/js/Chart.min.js"></script>
 <script type="text/javascript" src="graph/js/angular.min.js"></script>
 <script type="text/javascript" src="graph/js/Chart.bundle.js"></script>
-<script type="text/javascript" src="graph/js/angular-charts.js"></script>
+<script type="text/javascript" src="graph/js/angular-chart.js"></script>
 <script type="text/javascript" src="graph/js/app.js"></script>
 </body>
 </html>
