@@ -112,7 +112,7 @@ else {
             $start = ($page - 1) * $limit;
         else
             $start = 0;
-        $sql = "SELECT * FROM stock_details ORDER BY date desc LIMIT $start, $limit";
+        $sql = "SELECT * FROM stock_details WHERE isDisposed is null ORDER BY date desc LIMIT $start, $limit";
         if(isset($_POST['Search']) AND trim($_POST['searchtxt'])!="")
         {
             $sql = "SELECT * FROM stock_details WHERE stock_name LIKE '%".trim($_POST['searchtxt'])."%' OR supplier_id LIKE '%".trim($_POST['searchtxt'])."%' OR category LIKE '%".trim($_POST['searchtxt'])."%' OR date LIKE '%".trim($_POST['searchtxt'])."%' ORDER BY date desc LIMIT $start, $limit ";

@@ -175,6 +175,8 @@ else {
                                         <div class="form-group">
                                             <label>Category</label>
                                             <input class="form-control" name="category" type="text" id="singleBirdRemote"  required aria-required="true"  >
+                                            <a href="#"> new </a> 
+                                            <input class="form-control" name="category" type="text" id="singleBirdRemote"  required aria-required="true"  >
                                         </div>
                                         <div class="form-group">
                                             <label>Buying Rate</label>

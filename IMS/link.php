@@ -5,8 +5,22 @@
             <a href="admin.php"> Home<span style="font-size:22px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a>
         </li>
         <li>
+            <a href="javascript:;" data-toggle="collapse" data-target="#demo100"> Category 
+                <i style="font-size:16px;" class="pull-center hidden-xs showopacity glyphicon glyphicon-menu-down"></i>
+                    <span style="font-size:22px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user">
+            </a>
+            <ul id="demo100" class="collapse">
+                <li class="active">
+                    <a href="view_category.php"><span style="font-size:18px;" class="pull-left hidden-xs showopacity glyphicon glyphicon-eye-close"></span> View Category Details</a>
+                </li>
+            </ul>
+        </li>
+        <!--
+            <li>
             <a href="view_category.php"> View Category<span style="font-size:22px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-shopping-cart"></span></a>
         </li>
+            -->
+        
         <li>
             <a href="javascript:;" data-toggle="collapse" data-target="#demo0">Customer <span style="font-size:16px;" class="glyphicon glyphicon-menu-down"></span><span style="font-size:22px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a>
             <ul id="demo0" class="collapse">
