@@ -73,7 +73,7 @@ else {
                     <div class="col-lg-4">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Product Notish Chart</h3>
+                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Product Notice Chart</h3>
                             </div>
                             <div>
                                 <table class="table table-bordered table-hover table-striped">

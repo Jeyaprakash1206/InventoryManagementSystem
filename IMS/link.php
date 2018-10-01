@@ -5,11 +5,14 @@
             <a href="admin.php"> Home<span style="font-size:22px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a>
         </li>
         <li>
-            <a href="javascript:;" data-toggle="collapse" data-target="#demo100"> Category 
+            <a href="javascript:;" data-toggle="collapse" data-target="#demo2"> Category 
                 <i style="font-size:16px;" class="pull-center hidden-xs showopacity glyphicon glyphicon-menu-down"></i>
                     <span style="font-size:22px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user">
             </a>
-            <ul id="demo100" class="collapse">
+            <ul id="demo2" class="collapse">
+                <li class="active">
+                    <a href="add_category_details.php"><span style="font-size:18px;" class="pull-left hidden-xs showopacity glyphicon glyphicon-plus-sign"></span> Add Category Details</a>
+                </li>
                 <li class="active">
                     <a href="view_category.php"><span style="font-size:18px;" class="pull-left hidden-xs showopacity glyphicon glyphicon-eye-close"></span> View Category Details</a>
                 </li>

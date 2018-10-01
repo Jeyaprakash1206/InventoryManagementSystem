@@ -40,6 +40,8 @@
         	<li>Tracking Inventory levels, Orders, Sales and Deliveries.</li>
         </ul>
             <a class="link animated fadeInUp delay-1s" href="indexx.php">Get Started</a>
+        <br />
+        New User <a class="" href="register.php">Register here</a>
     </div>
 </div>
 </header>
