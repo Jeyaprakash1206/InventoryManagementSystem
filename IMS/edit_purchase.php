@@ -50,7 +50,8 @@ else {
 				function formatResult(row) {
 					return row[0].replace(/(<.+?>)/gi, '');
 				}
-				$("#supplier").autocomplete("supplier1.php", {
+				$("#supplier").autocomplete( {
+					source: "supplier1.php",
 					width: 160,
 					autoFill: true,
 					mustMatch: true,
@@ -67,7 +68,8 @@ else {
 			function callAutoComplete(idname)
 			{
 
-				$("#"+idname).autocomplete("stock.php", {
+				$("#"+idname).autocomplete({
+					source: "stock.php",  
 					width: 160,
 					autoFill: true,
 					mustMatch: true,

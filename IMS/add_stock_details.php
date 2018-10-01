@@ -32,6 +32,7 @@ else {
     <script type='text/javascript' src='js/jquery.autocomplete.js'></script>
     <script type='text/javascript' src='lib/jquery.ajaxQueue.js'></script>
     <script type='text/javascript' src='lib/thickbox-compressed.js'></script>
+    <script type='text/javascript' src='http://code.jquery.com/jquery-migrate-1.0.0.js'></script>
 
 
     <style>
@@ -50,8 +51,7 @@ else {
     <link rel="stylesheet" type="text/css" href="css/jquery.autocomplete.css" />
     <script type="text/javascript" src="js/jquery-dynamic-form.js"></script>
     <script type="text/javascript">
-        $().ready(function() {
-
+    $().ready(function() {
             function log(event, data, formatted) {
                 $("<li>").html( !data ? "No match!" : "Selected: " + formatted).appendTo("#result");
             }
@@ -62,18 +62,33 @@ else {
             function formatResult(row) {
                 return row[0].replace(/(<.+?>)/gi, '');
             }
-
-            $("#singleBirdRemote").autocomplete("category.php", {
+            // console.log('$("#singleBirdRemote")',$("#singleBirdRemote"))
+            // setTimeout(() => {
+            //     $("#singleBirdRemote").autocomplete("category.php", {
+            //     width: 160,
+            //     autoFill: true,
+            //     selectFirst: false
+            // });
+            // }, 1000);
+            // setTimeout(() => {
+            //     $("#suplier").autocomplete("supplier1.php", {
+            //     width: 160,
+            //     autoFill: true,
+            //     selectFirst: false
+            // });
+            // }, 1000);
+            $( "#singleBirdRemote" ).autocomplete({
+                source: "category.php",
                 width: 160,
                 autoFill: true,
                 selectFirst: false
             });
-            $("#suplier").autocomplete("supplier1.php", {
-                width: 160,
-                autoFill: true,
-                selectFirst: false
+            $("#supplier").autocomplete({
+                        source: "supplier1.php",
+                        width: 160,
+                        autoFill: true,
+                        selectFirst: false
             });
-
             $("#clear").click(function() {
                 $(":input").unautocomplete();
             });

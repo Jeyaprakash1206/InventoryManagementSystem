@@ -44,17 +44,20 @@ $().ready(function() {
 	
 
 
-	$("#singleBirdRemote").autocomplete("search.php", {
+	$("#singleBirdRemote").autocomplete({
+    source: "search.php",
 		width: 160,
 		autoFill: true,
 		selectFirst: false
 	});
-	$("#suplier").autocomplete("search.php", {
+	$("#suplier").autocomplete({
+    source: "search.php",
 		width: 160,
 		autoFill: true,
 		selectFirst: false
 	});
-	$("#uom").autocomplete("search.php", {
+	$("#uom").autocomplete({
+    source: "search.php",
 		width: 160,
 		autoFill: true,
 		selectFirst: false

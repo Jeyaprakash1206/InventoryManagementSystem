@@ -18,7 +18,8 @@ $(function() {
 	function format(mail) {
 		return mail.name + " &lt;" + mail.to + "&gt";
 	}
-	$("#email").autocomplete('emails.php', {
+	$("#email").autocomplete({
+		source: 'emails.php', 
 		multiple: true,
 		dataType: "json",
 		parse: function(data) {

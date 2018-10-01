@@ -57,7 +57,8 @@ else {
                 function formatResult(row) {
                     return row[0].replace(/(<.+?>)/gi, '');
                 }
-                $("#customer").autocomplete("customer.php", {
+                $("#customer").autocomplete({
+                    source:"customer.php", 
                     width: 160,
                     autoFill: true,
                     selectFirst: false
