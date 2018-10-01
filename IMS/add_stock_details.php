@@ -187,12 +187,16 @@ else {
                                             <label>Product Name</label>
                                             <input class="form-control" name="name" type="text" id="name" autocomplete="off" class="validate[required,length[0,100]] text-input" required>
                                         </div>
+                                        
                                         <div class="form-group">
                                             <label>Category</label>
                                             <input class="form-control" name="category" type="text" id="singleBirdRemote"  required aria-required="true"  >
+                                            <!--
                                             <a href="#"> new </a> 
                                             <input class="form-control" name="category" type="text" id="singleBirdRemote"  required aria-required="true"  >
+                                            -->
                                         </div>
+                                        
                                         <div class="form-group">
                                             <label>Buying Rate</label>
                                             <input class="form-control" name="buyingrate" type="text" id="buyingrate" autocomplete="off" class="validate[required,custom[onlyNumber],lengthCheck[6]] text-input"  required aria-required="true" pattern="[+0-9]+">
@@ -207,7 +211,7 @@ else {
                                         </div>
 
                                         <div class="form-group">
-                                            <label>Expire Date</label>
+                                            <label>Expiry Date</label>
                                             <input class="form-control" name="expire_date" type="text" id="datepicker"  required aria-required="true">
                                         </div>
 

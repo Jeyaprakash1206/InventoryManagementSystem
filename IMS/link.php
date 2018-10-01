@@ -10,9 +10,11 @@
                     <span style="font-size:22px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user">
             </a>
             <ul id="demo2" class="collapse">
+                <!--
                 <li class="active">
                     <a href="add_category_details.php"><span style="font-size:18px;" class="pull-left hidden-xs showopacity glyphicon glyphicon-plus-sign"></span> Add Category Details</a>
                 </li>
+                -->
                 <li class="active">
                     <a href="view_category.php"><span style="font-size:18px;" class="pull-left hidden-xs showopacity glyphicon glyphicon-eye-close"></span> View Category Details</a>
                 </li>
