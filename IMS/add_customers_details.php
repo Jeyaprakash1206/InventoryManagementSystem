@@ -71,7 +71,7 @@ else {
                   <div class="col-lg-12">
                         <div class="panel panel-primary">
                             <div class="panel-heading" align="center">
-                                <h1 class="panel-title"> Add Customers Details</h1>
+                                <h1 class="panel-title"> Add Customer Details</h1>
                             </div>
                             <div class="panel-body">
                                 <div class="row">
@@ -101,7 +101,7 @@ else {
                                             <form role="form" name="form1" method="post" id="form1" action="" align="center">
                                             <div class="form-group">
                                                 <label>Name</label>
-                                                <input class="form-control" name="name" type="text" id="name"  class="validate[required,length[0,100]] text-input"  required aria-required="true" pattern="[A-Za-z]+\[A-Za-z]+">
+                                                <input class="form-control" name="name" type="text" id="name"  class="validate[required,length[0,100]] text-input"  required aria-required="true" pattern="[A-Za-z]+\[A-Za-z]+" autocomplete="off">
                                             </div>
 
                                             <div class="form-group">
@@ -110,11 +110,11 @@ else {
                                             </div>
                                             <div class="form-group">
                                                 <label>Contact1</label>
-                                                <input class="form-control" name="contact1" type="text" id="buyingrate"  class="validate[optional,custom[onlyNumber],length[6,15]] text-input" required aria-required="true" pattern="[+0-9]+" >
+                                                <input class="form-control" name="contact1" type="text" id="buyingrate"  class="validate[optional,custom[onlyNumber],length[6,15]] text-input" required aria-required="true" pattern="[+0-9]+" autocomplete="off">
                                             </div>
                                             <div class="form-group">
                                                 <label>Contact2</label>
-                                                <input class="form-control" name="contact2" type="text" id="sellingrate"  class="validate[optional,custom[onlyNumber],length[6,15]] text-input"  required aria-required="true" pattern="[+0-9]+">
+                                                <input class="form-control" name="contact2" type="text" id="sellingrate"  class="validate[optional,custom[onlyNumber],length[6,15]] text-input"  required aria-required="true" pattern="[+0-9]+" autocomplete="off">
                                             </div>
                                             <button type="submit" name="Submit" class="btn btn-primary">Submit </button>
                                             <button type="reset" name="Reset" value="Reset" class="btn btn-primary">Reset </button>

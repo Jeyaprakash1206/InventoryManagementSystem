@@ -654,7 +654,7 @@ else {
 														<td>&nbsp;</td>
 														<td>&nbsp;</td>
 														<td><div align="center">
-																<a href="view_stock_entries.php"><button class="btn btn-primary">Cancle </button></a>
+																<a href="view_stock_entries.php"><button class="btn btn-primary">Cancel </button></a>
 															</div></td>
 														<td>&nbsp;</td>
 														<td><input type="submit" class="btn btn-primary" name="Submit" value="Update" onClick="updateSubtotal()" ></td>

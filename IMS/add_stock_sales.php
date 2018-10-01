@@ -98,7 +98,7 @@ else {
                         }
                         if($k>1)
                         {
-                            alert("Dublicate stock Entry. please remove new and add stock in existing one !");
+                            alert("Duplicate stock Entry. Please remove new and add stock in existing one !");
                         }
                     }
                 }
@@ -407,10 +407,17 @@ else {
                                                         $max=$max+1;
                                                         $autoid="SA".$max."";
                                                         ?>
-                                                        <td> <input class="form-control" name="id" type="text" id="id" readonly="" value="<?php echo $autoid; ?>" style="width:90px;" required></td>
+                                                        <td> 
+                                                            <input class="form-control" name="id" type="text" 
+                                                            id="id" readonly="" value="<?php echo $autoid; ?>" 
+                                                            style="width:90px;" required autocomplete="off">
+                                                        </td>
                                                         <td>&nbsp;</td>
                                                         <td><strong>Date</strong></td>
-                                                        <td><input class="form-control" type="text" id="datefield" name="date" class="date_input" value="<?php echo date('d-m-Y');?>" style="width:100px;"></td>
+                                                        <td>
+                                                            <input class="form-control" type="text" id="datefield" 
+                                                            name="date" class="date_input" value="<?php echo date('d-m-Y');?>" 
+                                                            style="width:100px;" autocomplete="off"></td>
                                                         <br>
                                                         <br>
                                                     </div>
@@ -423,10 +430,16 @@ else {
                                                 <tr>
                                                     <div class="form-group-md" align="center">
                                                         <td><strong>Bill No:</strong></td>
-                                                        <td><input class="form-control" type="text" name="billnumber" style="width:100px;" id="billnumber"  class="validate[required,length[0,100]] text-input" required></td></td>
+                                                        <td>
+                                                            <input class="form-control" type="text" name="billnumber" style="width:100px;" 
+                                                            id="billnumber"  class="validate[required,length[0,100]] text-input" required autocomplete="off">
+                                                        </td
                                                         <td>&nbsp;</td>
                                                         <td><strong>Customer</strong></td>
-                                                        <td><input class="form-control" name="customer1" type="text" id="customer"  value="" style="width:100px;" autocomplete="off" required></td>
+                                                        <td>
+                                                            <input class="form-control" name="customer1" type="text" id="customer"  value="" 
+                                                            style="width:100px;" autocomplete="off" required autocomplete="off">
+                                                        </td>
                                                         <td>&nbsp;</td>
                                                         <td><strong>Address</strong></td>
                                                         <td><textarea class="form-control" name="address1" id="address" style="width:100px;"></textarea></td>
@@ -436,9 +449,12 @@ else {
                                                             <br><br><br>
                                                             <strong>Contact2</strong>
                                                         </td>
-                                                        <td><input class="form-control" name="contact1" type="text" id="contact1"  value="" style="width:90px;">
+                                                        <td>
+                                                            <input class="form-control" name="contact1" type="text" id="contact1"  value="" 
+                                                            style="width:90px;" autocomplete="off">
                                                             <br>
-                                                            <input class="form-control" name="contact2" type="text" id="contact2"  value="" style="width:90px;" >
+                                                            <input class="form-control" name="contact2" type="text" id="contact2"  value="" 
+                                                            style="width:90px;" autocomplete="off">
                                                         </td>
                                                     </div>
                                                 </tr>
@@ -455,13 +471,13 @@ else {
                                                         <td ><div align="left"><strong>Name:</strong></div></td>
                                                         <td ><input name="name[]" class="form-control" type="text"  id="0" style="width:120px;" onFocus="callAutoComplete(this.id)"  onBlur="callAutoAsignValue(this.id)" autocomplete="off"></td>
                                                         <td><div align="right"><strong>Qty:</strong></div></td>
-                                                        <td><input name="quantity[]" class="form-control" type="text" id="00" style="width:50px;" onKeyUp="callQKeyUp(this.id)"></td>
+                                                        <td><input name="quantity[]" class="form-control" type="text" id="00" style="width:50px;" onKeyUp="callQKeyUp(this.id)" autocomplete="off"></td>
                                                         <td><div align="left"><strong>Rate:</strong></div></td>
-                                                        <td><input name="rate[]" class="form-control" type="text" id="000" readonly="" style="width:80px;" onKeyUp="callRKeyUp(this.id)"  ></td>
+                                                        <td><input name="rate[]" class="form-control" type="text" id="000" readonly="" style="width:80px;" onKeyUp="callRKeyUp(this.id)"  autocomplete="off"></td>
                                                         <td><strong>Avail Qty</strong></td>
-                                                        <td><input name="avail[]" class="form-control" type="text" id="0000" readonly="" value="" style="width:50px;" ></td>
+                                                        <td><input name="avail[]" class="form-control" type="text" id="0000" readonly="" value="" style="width:50px;" autocomplete="off"></td>
                                                         <td><div align="left"><strong>Total:</strong></div></td>
-                                                        <td><input name="total[]" class="form-control" type="text" id="00000" readonly="" value="" style="width:120px;text-align:right;" >  </td>
+                                                        <td><input name="total[]" class="form-control" type="text" id="00000" readonly="" value="" style="width:120px;text-align:right;" autocomplete="off">  </td>
                                                         <td width="50"><p><span><a id="minus" href=""  >[-]</a> <a id="plus" href="">[+]</a></span></p></td>
                                                     </div>
                                                 </tr>
@@ -492,12 +508,12 @@ else {
                                                     </tr>
                                                     <tr>
                                                         <td><strong>Payment:</strong></td>
-                                                        <td><input type="text" class="form-control" name="payment" style="width:100px; " id="payment" class="validate[required,custom[onlyFloat],lengthCheck[6]] text-input" onKeyUp="balanceCalc()"></td>
+                                                        <td><input type="text" class="form-control" name="payment" style="width:100px; " id="payment" class="validate[required,custom[onlyFloat],lengthCheck[6]] text-input" onKeyUp="balanceCalc()" autocomplete="off"></td>
                                                         <td><div align="left"><strong>Description</strong></div></td>
                                                         <td rowspan="2"><textarea class="form-control" name="description" style="width:150px; height:70px; "></textarea></td>
                                                         <td><strong>Sub Total </strong></td>
                                                         <td>&nbsp;</td>
-                                                        <td><input name="subtotal" class="form-control" id="subtotal" type="text" readonly="" style="width:100px; text-align:right; color:#333333; font-weight:bold; font-size:16px;"></td>
+                                                        <td><input name="subtotal" class="form-control" id="subtotal" type="text" readonly="" style="width:100px; text-align:right; color:#333333; font-weight:bold; font-size:16px;" autocomplete="off"></td>
                                                         <td><img src="images/refresh.png" alt="Refresh" align="absmiddle" onClick="updateSubtotal()"></td>
                                                         <td>&nbsp;</td>
                                                         <td>&nbsp;</td>
@@ -511,7 +527,7 @@ else {
                                                     </tr>
                                                     <tr>
                                                         <td><strong>Balance:</strong></td>
-                                                        <td><input name="balance" class="form-control" type="text" id="balance" style="width:100px; " value="0.00" readonly=""></td>
+                                                        <td><input name="balance" class="form-control" type="text" id="balance" style="width:100px; " value="0.00" readonly="" autocomplete="off"></td>
                                                         <td>&nbsp;</td>
                                                         <td>&nbsp;</td>
                                                         <td><div align="center"></div></td>

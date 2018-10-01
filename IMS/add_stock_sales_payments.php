@@ -170,10 +170,10 @@ else {
                                             <div class="form-group">
                                                 <label>New Payment</label>
                                                 <input class="form-control" name="newpayment" type="text" id="newpayment"  class="validate[optional,custom[onlyNumber],length[0,100]] text-input"
-                                                       value="" onKeyUp="balanceCalc()" required>
+                                                       value="" onKeyUp="balanceCalc()" required autocomplete="off">
                                             </div>
                                             <button type="submit" name="Submit" class="btn btn-primary">Submit </button>
-                                            <a href="view_stock_sales_payments.php"><input type="button" name="Reset" value="Cancle" class="btn btn-primary"></a>
+                                            <a href="view_stock_sales_payments.php"><input type="button" name="Reset" value="Cancel" class="btn btn-primary"></a>
                                         </form>
                                     </div>
                                 </div>

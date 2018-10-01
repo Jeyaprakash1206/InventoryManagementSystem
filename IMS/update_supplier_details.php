@@ -118,7 +118,7 @@ else {
                                             </div>
 
                                             <button type="submit" name="Submit" class="btn btn-primary">Update </button>
-                                            <a href="view_supplier_details.php"><button class="btn btn-primary">Cancle </button></a>
+                                            <a href="view_supplier_details.php"><button class="btn btn-primary">Cancel </button></a>
 
                                         </form>
                                     </div>

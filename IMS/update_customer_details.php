@@ -121,7 +121,7 @@ else {
                                                 <input class="form-control" name="contact2" type="text" id="sellingrate"  class="validate[optional,custom[onlyNumber],length[6,15]] text-input" required aria-required="true" pattern="[+0-9]+" value="<?php echo $line->customer_contact2;?>" >
                                             </div>
                                             <input type="submit" name="Submit" class="btn btn-primary " value="Update">
-                                            <a href="view_customer_details.php"><button class="btn btn-primary ">Cancle </button></a>
+                                            <a href="view_customer_details.php"><button class="btn btn-primary ">Cancel </button></a>
                                         </form>
                                     </div>
                                 </div>

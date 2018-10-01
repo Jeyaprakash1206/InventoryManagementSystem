@@ -69,7 +69,7 @@
                     <a href="view_stock_entries.php"><span style="font-size:18px;" class="pull-left hidden-xs showopacity glyphicon glyphicon-blackboard"></span> View Purchase</a>
                 </li>
                 <li>
-                    <a href="view_stock_availability.php"><span style="font-size:28px;" class="pull-left hidden-xs showopacity glyphicon glyphicon-filter"></span> View Stock Availibility</a>
+                    <a href="view_stock_availability.php"><span style="font-size:28px;" class="pull-left hidden-xs showopacity glyphicon glyphicon-filter"></span> View Stock Availability</a>
                 </li>
             </ul>
         </li>

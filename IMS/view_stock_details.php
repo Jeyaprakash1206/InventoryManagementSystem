@@ -206,7 +206,7 @@ else {
                                     <button name="Search" class="btn btn-primary dropdown-toggle" type="submit">Search</button>
                                 </form>
                                 <form class="navbar-form navbar-left" action="" method="get" name="page">
-                                    Page per Record<input class="form-control" name="limit" type="text"  style="margin-left:5px;" value="<?php if(isset($_GET['limit'])) echo $_GET['limit']; else echo "10"; ?>" size="3" maxlength="3">
+                                     Limit<input class="form-control" name="limit" type="text"  style="margin-left:5px;" value="<?php if(isset($_GET['limit'])) echo $_GET['limit']; else echo "10"; ?>" size="3" maxlength="3">
                                     <input class="btn btn-primary dropdown-toggle" name="go" type="submit" value="Go">
                                     <input class="btn btn-primary dropdown-toggle" type="button" name="selectall" value="SelectAll" onClick="checkAll()"  style="margin-left:5px;"/>
                                     <input class="btn btn-primary dropdown-toggle" type="button" name="unselectall" value="DeSelectAll" onClick="uncheckAll()" style="margin-left:5px;" />

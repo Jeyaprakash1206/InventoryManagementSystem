@@ -185,12 +185,12 @@ else {
                                         </div>
                                         <div class="form-group">
                                             <label>Product Name</label>
-                                            <input class="form-control" name="name" type="text" id="name" autocomplete="off" class="validate[required,length[0,100]] text-input" required>
+                                            <input class="form-control" name="name" type="text" id="name" autocomplete="off" class="validate[required,length[0,100]] text-input" required autocomplete="off">
                                         </div>
                                         
                                         <div class="form-group">
                                             <label>Category</label>
-                                            <input class="form-control" name="category" type="text" id="singleBirdRemote"  required aria-required="true"  >
+                                            <input class="form-control" name="category" type="text" id="singleBirdRemote"  required aria-required="true"  autocomplete="off">
                                             <!--
                                             <a href="#"> new </a> 
                                             <input class="form-control" name="category" type="text" id="singleBirdRemote"  required aria-required="true"  >
@@ -199,11 +199,15 @@ else {
                                         
                                         <div class="form-group">
                                             <label>Buying Rate</label>
-                                            <input class="form-control" name="buyingrate" type="text" id="buyingrate" autocomplete="off" class="validate[required,custom[onlyNumber],lengthCheck[6]] text-input"  required aria-required="true" pattern="[+0-9]+">
+                                            <input class="form-control" name="buyingrate" type="text" id="buyingrate" autocomplete="off" 
+                                            class="validate[required,custom[onlyNumber],lengthCheck[6]] text-input"  required aria-required="true" 
+                                            pattern="[+0-9]+" autocomplete="off">
                                         </div>
                                         <div class="form-group">
                                             <label>Selling Rate</label>
-                                            <input class="form-control" name="sellingrate" type="text" id="sellingrate" autocomplete="off"  class="validate[required,custom[onlyNumber],lengthCheck[6]] text-input"   required aria-required="true" pattern="[+0-9]+">
+                                            <input class="form-control" name="sellingrate" type="text" id="sellingrate" autocomplete="off"  
+                                            class="validate[required,custom[onlyNumber],lengthCheck[6]] text-input"   required aria-required="true" 
+                                            pattern="[+0-9]+" autocomplete="off">
                                         </div>
                                         <div class="form-group">
                                             <label>Supplier Name</label>

@@ -321,7 +321,7 @@ else {
                             <div class="panel-body">
 
                                 <form class="navbar-form navbar-left" action="" method="get" name="page">
-                                    Page per Record<input class="form-control" name="limit" type="text"  style="margin-left:5px;" value="<?php if(isset($_GET['limit'])) echo $_GET['limit']; else echo "40"; ?>" size="3" maxlength="3">
+                                    Limit<input class="form-control" name="limit" type="text"  style="margin-left:5px;" value="<?php if(isset($_GET['limit'])) echo $_GET['limit']; else echo "40"; ?>" size="3" maxlength="3">
                                     <input class="btn btn-primary dropdown-toggle" name="go" type="submit" value="Go">
                                 </form>
                             </div>

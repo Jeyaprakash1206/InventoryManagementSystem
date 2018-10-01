@@ -129,7 +129,7 @@ else {
 
                                                    <td><strong>Sales Report: </strong></td>
                                                    <td></td>
-                                                   <td><input class="form-control" name="from_sales_date" type="text" id="from_sales_date" placeholder="Form" style="width:90px;"></td>
+                                                   <td><input class="form-control" name="from_sales_date" type="text" id="from_sales_date" placeholder="From" style="width:90px;"></td>
                                                    <td></td>
                                                    <td><input class="form-control" name="to_sales_date" type="text" id="to_sales_date" placeholder="To" style="width:90px;"></td>
                                                    <td></td>

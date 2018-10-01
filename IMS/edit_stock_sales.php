@@ -640,7 +640,7 @@ else {
 
                                                         <td><input type="submit" class="btn btn-primary" name="Submit" value="Update" onClick="updateSubtotal()" ></td>
                                                         <td>&nbsp;</td>
-                                                        <td> <a href="view_stock_sales.php"><button class="btn btn-primary">Cancle </button></a></td>
+                                                        <td> <a href="view_stock_sales.php"><button class="btn btn-primary">Cancel </button></a></td>
                                                         <td>&nbsp;</td>
                                                         <td>&nbsp;</td>
                                                         <td>&nbsp;</td>
