@@ -39,17 +39,20 @@ else {
 
 
 
-                $("#singleBirdRemote").autocomplete("category.php", {
+                $("#singleBirdRemote").autocomplete({
+                    source: "category.php",
                     width: 160,
                     autoFill: true,
                     selectFirst: false
                 });
-                $("#supplier").autocomplete("supplier1.php", {
+                $("#supplier").autocomplete({
+                    source: "supplier1.php",
                     width: 160,
                     autoFill: true,
                     selectFirst: false
                 });
-                $("#uom").autocomplete("uom.php", {
+                $("#uom").autocomplete({
+                    source: "uom.php",
                     width: 160,
                     autoFill: true,
                     selectFirst: false

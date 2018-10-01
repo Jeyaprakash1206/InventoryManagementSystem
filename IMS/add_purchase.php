@@ -34,13 +34,27 @@ else {
         <link rel="stylesheet" type="text/css" href="css/jquery.autocomplete.css" />
         <script type="text/javascript" src="js/jquery-dynamic-form.js"></script>
         <script type="text/javascript">
-            $(document).ready(function(){
-                $("#duplicate").dynamicForm("#plus", "#minus", {limit:50, createColor: 'yellow',removeColor: 'green'});
-            });
+             $(document).ready(function(){
+                 $("#duplicate").dynamicForm("#plus", "#minus", {limit:50, createColor: 'yellow',removeColor: 'green'});
+             });
         </script>
 
         <script type="text/javascript">
+        jQuery.browser = {};
+            (function () {
+                jQuery.browser.msie = false;
+                jQuery.browser.version = 0;
+                if (navigator.userAgent.match(/MSIE ([0-9]+)\./)) {
+                    jQuery.browser.msie = true;
+                    jQuery.browser.version = RegExp.$1;
+                }
+            })();
             $().ready(function() {
+                console.log($("#supplier"))
+                $("#supplier").autocomplete({
+                    source: "supplier1.php"
+                });
+
                 function log(event, data, formatted) {
                     $("<li>").html( !data ? "No match!" : "Selected: " + formatted).appendTo("#result");
                 }
@@ -50,12 +64,7 @@ else {
                 function formatResult(row) {
                     return row[0].replace(/(<.+?>)/gi, '');
                 }
-                $("#supplier").autocomplete("supplier1.php", {
-                    width: 160,
-                    autoFill: true,
-                    mustMatch: true,
-                    selectFirst: false
-                });
+                
             });
         </script>
 
@@ -65,7 +74,8 @@ else {
         <script>
             function callAutoComplete(idname)
             {
-                $("#"+idname).autocomplete("stock.php", {
+                $("#"+idname).autocomplete({
+                    source: "stock.php",
                     width: 160,
                     autoFill: true,
                     mustMatch: false,
